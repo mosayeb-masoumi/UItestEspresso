@@ -38,7 +38,14 @@ public class MainActivityTest {
         Espresso.onView(withId(R.id.btn)).perform(click());
         // checking the text in the textView
         Espresso.onView(withId(R.id.txt)).check(matches(withText(mName)));
+
+        Espresso.onView(withId(R.id.btn_next)).perform(click());
+
+        // This view is in a different Activity, no need to tell Espresso.
+        Espresso.onView(withId(R.id.txt_result)).check(matches(withText(mName)));
     }
+
+
 
 
     @After
