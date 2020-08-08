@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btn_next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 intent.putExtra("NAME",edt.getText().toString());
                 startActivity(intent);
             }
